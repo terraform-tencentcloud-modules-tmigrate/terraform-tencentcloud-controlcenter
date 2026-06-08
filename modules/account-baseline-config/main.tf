@@ -8,4 +8,7 @@ resource "tencentcloud_controlcenter_account_factory_baseline_config" "this" {
       configuration = baseline_config_items.value.configuration
     }
   }
+  lifecycle {
+    ignore_changes = [ name ]
+  }
 }
