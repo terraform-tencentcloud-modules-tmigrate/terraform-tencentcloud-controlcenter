@@ -1,3 +1,3 @@
 output "batch_apply_id" {
-  value = tencentcloud_batch_apply_account_baselines.baselines.id
+  value = { for k, v in tencentcloud_batch_apply_account_baselines.baselines : k => v.id }
 }
